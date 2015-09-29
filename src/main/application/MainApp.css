@@ -1,0 +1,30 @@
+.button {
+	-fx-font-family: Helvetica Neue;
+	-fx-font-weight: bold;
+}
+
+.label {
+	-fx-font-family: Helvetica Neue;
+}
+
+.check-box {
+	-fx-font-family: Helvetica Neue;
+	-fx-padding:0px 0px 10px 0px;
+}
+
+
+#SubmitMessage {
+	-fx-text-fill:green;
+}
+
+#ConnectionsP .label {
+	-fx-padding:0px 10px 0px 10px;
+}
+
+#PairedCL {
+	-fx-text-fill:green;
+}
+
+#SubmitSuccessfulSL {
+	-fx-text-fill:green;
+}

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="500.0" prefWidth="350.0" stylesheets="@MainApp.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.application.AppController">
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane id="DoneP" fx:id="DoneP" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Label id="NoLoadDL" fx:id="NoLoadDL" layoutX="122.0" layoutY="81.0" text="NO CURRENT LOAD" />
+               </children>
+            </Pane>
+            <Pane id="MainP" fx:id="MainP" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Button id="ConnectMB" fx:id="ConnectMB" layoutX="68.0" layoutY="79.0" mnemonicParsing="false" onAction="#ConnectMP" prefHeight="107.0" prefWidth="214.0" text="Connect" />
+                  <Button id="ConnectionsMB" fx:id="ConnectionsMB" layoutX="68.0" layoutY="208.0" mnemonicParsing="false" onAction="#ConnectionsMP" prefHeight="103.0" prefWidth="215.0" text="My Connections" />
+               </children>
+            </Pane>
+            <Pane id="ConnectingP" fx:id="ConnectingP" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Label fx:id="PairedCL" layoutX="102.0" layoutY="392.0" text="*Device Paired Successfully*" />
+                  <ProgressIndicator id="ProgressCInd" fx:id="ProgressCInd" layoutX="90.0" layoutY="118.0" prefHeight="173.0" prefWidth="171.0" progress="-1.0" />
+                  <Label id="ConnectingCL" fx:id="ConnectingCL" layoutX="141.0" layoutY="85.0" text="Connecting..." />
+                  <Button id="CancelCB" fx:id="CancelCB" layoutX="149.0" layoutY="350.0" mnemonicParsing="false" onAction="#CancelCP" text="Cancel" />
+                  <Button fx:id="DoneCB" layoutX="291.0" layoutY="409.0" mnemonicParsing="false" onAction="#DoneCP" text="Done" />
+                  <Label id="ConnectedCL" fx:id="ConnectedCL" layoutX="147.0" layoutY="85.0" text="Connected" />
+               </children>
+            </Pane>
+            <Pane id="ProgressP" fx:id="ProgressP" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <ProgressIndicator id="ProgressPInd" fx:id="ProgressPInd" layoutX="93.0" layoutY="136.0" prefHeight="176.0" prefWidth="164.0" progress="-1.0" />
+                  <Label id="CountDownPL" fx:id="CountDownPL" layoutX="137.0" layoutY="201.0" text="59:59">
+                     <font>
+                        <Font size="32.0" />
+                     </font></Label>
+                  <Label id="TimePL" fx:id="TimePL" layoutX="120.0" layoutY="91.0" text="TIME REMAINING">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Button id="DonePB" fx:id="DonePB" layoutX="284.0" layoutY="409.0" mnemonicParsing="false" onAction="#DonePP" text="Done" visible="false" />
+               </children>
+            </Pane>
+            <Pane id="NotificationsP" fx:id="NotificationsP" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label id="NotificationsNL" fx:id="NotificationsNL" layoutX="132.0" layoutY="54.0" text="NOTIFICATIONS" />
+                  <Label id="DryerNL" fx:id="DryerNL" layoutX="45.0" layoutY="196.0" text="DRYER" />
+                  <Button id="SettingsNB" fx:id="SettingsNB" layoutX="115.0" layoutY="224.0" mnemonicParsing="false" onAction="#SettingsNP" text="Change Settings" />
+                  <Label id="WrinkleNL" fx:id="WrinkleNL" layoutX="40.0" layoutY="285.0" text="WRINKLE PREVENT" />
+                  <Button id="SubmitNB" fx:id="SubmitNB" layoutX="147.0" layoutY="422.0" mnemonicParsing="false" onAction="#SubmitNP" text="Submit" />
+                  <VBox layoutX="63.0" layoutY="115.0" prefHeight="49.0" prefWidth="240.0">
+                     <children>
+                        <HBox prefHeight="25.0" prefWidth="200.0" spacing="20.0">
+                           <children>
+                              <Label text="Notify me" />
+                              <TextField prefHeight="16.0" prefWidth="82.0" />
+                              <Label text="minutes" />
+                           </children>
+                        </HBox>
+                        <Label text="before my laundry is done" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="62.0" layoutY="320.0" prefHeight="57.0" prefWidth="227.0">
+                     <children>
+                        <HBox prefHeight="26.0" prefWidth="200.0" spacing="20.0">
+                           <children>
+                              <Label text="Run for" />
+                              <TextField prefHeight="25.0" prefWidth="88.0" />
+                              <Label text="minutes" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="27.0" prefWidth="191.0" spacing="20.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="15.0" text="at" />
+                              <TextField prefHeight="25.0" prefWidth="100.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Label id="SubmitMessage" fx:id="SubmitSuccessfulNL" layoutX="86.0" layoutY="397.0" text="*Notifications Changed Successfully*" />
+                  <VBox layoutX="210.0" layoutY="349.0" prefHeight="56.0" prefWidth="100.0">
+                     <children>
+                        <CheckBox mnemonicParsing="false" text="AM" />
+                        <CheckBox mnemonicParsing="false" text="PM" />
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Pane id="ConnectionsP" fx:id="ConnectionsP" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Label id="ConnectionsCL" fx:id="ConnectionsCL" layoutX="133.0" layoutY="50.0" text="My Connections" />
+                  <Label id="Number1CL" fx:id="Number1CL" layoutX="48.0" layoutY="119.0" text="1" />
+                  <Label id="Number2CL" fx:id="Number2CL" layoutX="48.0" layoutY="174.0" text="2" />
+                  <Label id="Number3CL" fx:id="Number3CL" layoutX="48.0" layoutY="234.0" prefHeight="17.0" prefWidth="7.0" text="3" />
+                  <Label id="MaytagEpconCL" fx:id="MaytagEpconCL" layoutX="113.0" layoutY="119.0" text="Maytag 2015 Epson" />
+                  <Button id="Drop1CB" fx:id="Drop1CB" layoutX="258.0" layoutY="115.0" mnemonicParsing="false" text="Drop" />
+                  <Button id="Drop2CB" fx:id="Drop2CB" layoutX="258.0" layoutY="170.0" mnemonicParsing="false" text="Drop" />
+                  <Label id="KenmoreWhirlCL" fx:id="KenmoreWhirlCL" layoutX="111.0" layoutY="174.0" text="Kenmore 2012 Whirl" />
+                  <ImageView id="SecondImgCIV" fx:id="SecondImgCIV" fitHeight="29.0" fitWidth="28.0" layoutX="75.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/smartphone_icon.png" />
+                     </image></ImageView>
+                  <Label id="MaytagSteelCL" fx:id="MaytagSteelCL" layoutX="116.0" layoutY="234.0" text="Maytag 2016 Steel" />
+                  <Button id="Drop3CB" fx:id="Drop3CB" layoutX="258.0" layoutY="230.0" mnemonicParsing="false" text="Drop" />
+                  <ImageView id="FirstImgCIV" fx:id="SecondImgCIV1" fitHeight="29.0" fitWidth="28.0" layoutX="75.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/smartphone_icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="SecondImgCIV" fx:id="SecondImgCIV2" fitHeight="29.0" fitWidth="28.0" layoutX="75.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/smartphone_icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane id="SettingsP" fx:id="SettingsP" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Label id="DryerSL" fx:id="DryerSL" layoutX="72.0" layoutY="73.0" text="DRYER" />
+                  <CheckBox id="DryerSCB" fx:id="DryerSCB" layoutX="52.0" layoutY="100.0" mnemonicParsing="false" text="Stop Dryer" />
+                  <Label id="CycleSL" fx:id="CycleSL" layoutX="74.0" layoutY="158.0" text="CYCLE" />
+                  <VBox layoutX="50.0" layoutY="290.0" prefHeight="80.0" prefWidth="100.0">
+                     <children>
+                        <CheckBox id="LowSCB" fx:id="LowSCB" mnemonicParsing="false" text="Low" />
+                        <CheckBox id="MediumSCB" fx:id="MediumSCB" mnemonicParsing="false" text="Medium" />
+                        <CheckBox id="HighSCB" fx:id="HighSCB" mnemonicParsing="false" text="High" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="50.0" layoutY="194.0" prefHeight="61.0" prefWidth="79.0">
+                     <children>
+                        <CheckBox id="NormalSCB" fx:id="NormalSCB" mnemonicParsing="false" text="Normal" />
+                        <CheckBox id="DelicateSCB" fx:id="DelicateSCB" mnemonicParsing="false" text="Delicate" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="183.0" layoutY="194.0" prefHeight="61.0" prefWidth="121.0">
+                     <children>
+                        <CheckBox fx:id="PermPressSCB" mnemonicParsing="false" text="Permanent Press" />
+                        <CheckBox fx:id="AirFluffSCB" mnemonicParsing="false" text="Air Fluff" />
+                     </children>
+                  </VBox>
+                  <Button id="SubmitSB" fx:id="SubmitSB" layoutX="132.0" layoutY="412.0" mnemonicParsing="false" onAction="#SubmitSP" prefWidth="86.0" text="Submit" />
+                  <Label id="SettingsSL" fx:id="SettingsSL" layoutX="154.0" layoutY="28.0" text="Settings" />
+                  <Label id="SubmitSuccessfulSL" fx:id="SubmitSuccessfulSL" layoutX="90.0" layoutY="383.0" text="*Settings Changed Successfully*" />
+                  <Label id="HeatSL" fx:id="HeatSL" layoutX="72.0" layoutY="263.0" text="HEAT" />
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </center>
+   <bottom>
+      <StackPane prefHeight="52.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane id="BackButtonP" fx:id="BackButtonP" prefHeight="39.0" prefWidth="400.0" visible="false">
+               <children>
+                  <Button id="BackButtonBB" fx:id="BackButtonBB" layoutX="7.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackButtonAll" text="Back" />
+               </children>
+            </Pane>
+            <Pane id="ButtonBarP" fx:id="ButtonBarP" prefHeight="69.0" prefWidth="350.0">
+               <children>
+                  <ButtonBar layoutX="-19.0" layoutY="-1.0" prefHeight="54.0" prefWidth="363.0">
+                     <buttons>
+                        <Button id="HomeBB" fx:id="HomeBB" mnemonicParsing="false" onAction="#HomeAll" prefHeight="83.0" prefWidth="198.0" text="Home" />
+                        <Button id="ProgressBB" fx:id="ProgressBB" mnemonicParsing="false" onAction="#ProgressAll" prefHeight="68.0" text="Progress" />
+                        <Button id="NotificationsBB" fx:id="NotificationsBB" mnemonicParsing="false" onAction="#NotificationsAll" prefHeight="74.0" text="Notifications" />
+                     </buttons>
+                  </ButtonBar>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </bottom>
+</BorderPane>

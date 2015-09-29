@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="RootLayoutBP" prefHeight="500.0" prefWidth="700.0" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.application.MainController">
+   <center>
+      <StackPane id="MainStackP" fx:id="MainStackP" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane id="MainP" fx:id="MainP" visible="false">
+         <children>
+            <Button id="ConnectMB" fx:id="ConnectMB" layoutX="12.0" layoutY="6.0" mnemonicParsing="false" onAction="#ConnectMP" prefHeight="448.0" prefWidth="332.0" text="CONNECT" />
+            <Button id="CyclesMB" fx:id="CyclesMB" layoutX="355.0" layoutY="6.0" mnemonicParsing="false" onAction="#CyclesMP" prefHeight="448.0" prefWidth="334.0" text="CYCLES" />
+         </children>
+      </Pane>
+            <Pane id="ConnectDP" fx:id="ConnectDP" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Button id="CancelDB" fx:id="CancelCDB" layoutX="320.0" layoutY="390.0" mnemonicParsing="false" onAction="#CancelCDP" text="CANCEL" />
+                  <ProgressIndicator id="ProgressDPI" fx:id="ProgressCDInd" layoutX="232.0" layoutY="124.0" prefHeight="213.0" prefWidth="237.0" progress="-1.0" />
+                  <Button id="DoneCDB" fx:id="DoneCDB" layoutX="634.0" layoutY="390.0" mnemonicParsing="false" onAction="#DoneCDP" text="Done" />
+                  <Label id="PairSuccessCDL" fx:id="PairSuccessCDL" layoutX="277.0" layoutY="366.0" text="*Device Paired Successfully*" />
+                  <Label id="PairingCDL" fx:id="PairingCDL" layoutX="327.0" layoutY="73.0" text="Pairing..." />
+                  <Label id="PairedCDL" fx:id="PairedCDL" layoutX="334.0" layoutY="73.0" text="Paired" />
+               </children></Pane>
+            <Pane id="DisconnectP" fx:id="DisconnectP" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Label fx:id="Number1DL" layoutX="112.0" layoutY="87.0" text="1" />
+                  <Label fx:id="MomiPhoneDL" layoutX="167.0" layoutY="87.0" text="Mom's iPhone" />
+                  <ImageView fx:id="DisconnectImg1DIV" fitHeight="26.0" fitWidth="28.0" layoutX="129.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/smartphone_icon.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="Disconnect1DB" layoutX="292.0" layoutY="85.0" mnemonicParsing="false" onAction="#Disconnected1DP" text="Disconnect" />
+                  <Label id="Disconnected1DL" fx:id="Disconnected1DL" layoutX="389.0" layoutY="87.0" text="*Device 1 Disconnected*" />
+                  <Label fx:id="Number2DL" layoutX="112.0" layoutY="146.0" text="2" />
+                  <Label fx:id="DadGalaxyDL" layoutX="176.0" layoutY="146.0" text="Dad's Galaxy" />
+                  <Button fx:id="Disconnect2DB" layoutX="292.0" layoutY="145.0" mnemonicParsing="false" onAction="#Disconnected2DP" text="Disconnect" />
+                  <Label id="Disconnected2DL" fx:id="Disconnected2DL" layoutX="389.0" layoutY="147.0" text="*Device 2 Disconnected*" />
+                  <Label fx:id="Number3DL" layoutX="112.0" layoutY="213.0" text="3" />
+                  <Label fx:id="JohniPhoneDL" layoutX="175.0" layoutY="213.0" text="John's Phone" />
+                  <Button fx:id="Disconnect3DB" layoutX="292.0" layoutY="211.0" mnemonicParsing="false" onAction="#Disconnected3DP" text="Disconnect" />
+                  <Label id="Disconnected3DL" fx:id="Disconnected3DL" layoutX="389.0" layoutY="213.0" text="*Device 3 Disconnected*" />
+                  <Label fx:id="Number4DL" layoutX="112.0" layoutY="277.0" text="4" />
+                  <Label fx:id="JaneSamsungDL" layoutX="167.0" layoutY="275.0" text="Jane's Samsung" />
+                  <Button fx:id="Disconnect4DB" layoutX="292.0" layoutY="273.0" mnemonicParsing="false" onAction="#Disconnected4DP" text="Disconnect" />
+                  <Label id="Disconnected4DL" fx:id="Disconnected4DL" layoutX="389.0" layoutY="275.0" text="*Device 4 Disconnected*" />
+                  <ImageView fx:id="DisconnectImg1DIV2" fitHeight="26.0" fitWidth="28.0" layoutX="129.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/smartphone_icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="DisconnectImg1DIV1" fitHeight="26.0" fitWidth="28.0" layoutX="129.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/smartphone_icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="DisconnectImg1DIV3" fitHeight="26.0" fitWidth="28.0" layoutX="129.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/smartphone_icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane id="DevicesP" fx:id="DevicesP" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Label fx:id="Number1DL" layoutX="171.0" layoutY="87.0" text="1" />
+                  <Label fx:id="MomiPhoneDL" layoutX="303.0" layoutY="87.0" text="Mom's iPhone" />
+                  <ImageView fx:id="DisconnectImg1DIV" fitHeight="44.0" fitWidth="45.0" layoutX="207.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/smartphone_icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="Number2DL" layoutX="171.0" layoutY="146.0" text="2" />
+                  <Label fx:id="DadGalaxyDL" layoutX="308.0" layoutY="146.0" text="Dad's Galaxy" />
+                  <Label fx:id="Number3DL" layoutX="171.0" layoutY="213.0" text="3" />
+                  <Label fx:id="JohniPhoneDL" layoutX="306.0" layoutY="213.0" text="John's Phone" />
+                  <Label fx:id="Number4DL" layoutX="171.0" layoutY="275.0" text="4" />
+                  <Label fx:id="JaneSamsungDL" layoutX="298.0" layoutY="275.0" text="Jane's Samsung" />
+                  <ImageView fx:id="DisconnectImg1DIV4" fitHeight="44.0" fitWidth="45.0" layoutX="207.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/smartphone_icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="DisconnectImg1DIV5" fitHeight="44.0" fitWidth="45.0" layoutX="207.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/smartphone_icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="DisconnectImg1DIV6" fitHeight="44.0" fitWidth="45.0" layoutX="207.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/smartphone_icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+      <Pane fx:id="CyclesP" visible="false">
+         <children>
+            <Button id="DryCB" fx:id="DryCB" layoutX="350.0" layoutY="21.0" mnemonicParsing="false" onAction="#DryCP" prefHeight="360.0" prefWidth="330.0" text="DRY" />
+            <Button id="WashCB" fx:id="WashCB" layoutX="20.0" layoutY="21.0" mnemonicParsing="false" onAction="#WashCP" prefHeight="360.0" prefWidth="330.0" text="WASH" />
+            <Button id="StartCB" fx:id="StartCB" layoutX="304.0" layoutY="389.0" mnemonicParsing="false" onAction="#Start" prefHeight="32.0" prefWidth="92.0" text="START" />
+         </children>
+      </Pane>
+      <Pane id="ConnectP" fx:id="ConnectP" visible="false">
+         <children>
+            <Button id="ConnectCB" fx:id="ConnectCB" layoutY="1.0" mnemonicParsing="false" onAction="#ConnectCP" prefHeight="448.0" prefWidth="234.0" text="CONNECT" />
+            <Button id="DevicesCB" fx:id="DevicesCB" layoutX="237.0" layoutY="1.0" mnemonicParsing="false" onAction="#DevicesCP" prefHeight="448.0" prefWidth="233.0" text="MY DEVICES" />
+            <Button id="DisconnectCB" fx:id="DisconnectCB" layoutX="472.0" layoutY="1.0" mnemonicParsing="false" onAction="#DisconnectCP" prefHeight="448.0" prefWidth="221.0" text="DISCONNECT" />
+         </children>
+      </Pane>
+      <Pane id="ProgressP" fx:id="ProgressP">
+         <children>
+            <ProgressIndicator id="Prog" fx:id="ProgressPInd" layoutX="235.0" layoutY="77.0" prefHeight="272.0" prefWidth="262.0" progress="-1.0" />
+            <Label id="TimeLeftPL" fx:id="TimeLeftPL" layoutX="327.0" layoutY="190.0" text="59:59">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label layoutX="312.0" layoutY="42.0" text="Time Remaining" />
+         </children>
+      </Pane>
+            <Pane id="DryP" fx:id="DryP" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <CheckBox id="DryDCB" fx:id="DryDCB" layoutX="314.0" layoutY="29.0" mnemonicParsing="false" text="Only Dry" />
+                  <VBox layoutX="164.0" layoutY="130.0" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="HeatDL" text="HEAT" />
+                        <CheckBox id="LowDCB" fx:id="LowDCB" mnemonicParsing="false" text="Low" />
+                        <CheckBox id="MediumDCB" fx:id="MediumDCB" mnemonicParsing="false" text="Medium" />
+                        <CheckBox id="HighDCB" fx:id="HighDCB" mnemonicParsing="false" text="High" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="473.0" layoutY="130.0" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label id="CycleDL" fx:id="CycleDL" text="CYCLE" />
+                        <CheckBox id="NormalDCB" fx:id="NormalDCB" mnemonicParsing="false" text="Normal" />
+                        <CheckBox id="DelicateDCB" fx:id="DelicateDCB" mnemonicParsing="false" text="Delicate" />
+                        <CheckBox id="PermPressDCB" fx:id="PermPressDCB" mnemonicParsing="false" text="Perm Press" />
+                        <CheckBox id="AirFluffDCB" fx:id="AirFluffDCB" mnemonicParsing="false" text="Air Fluff" />
+                        <CheckBox id="DeWrinkleDCB" fx:id="DeWrinkleDCB" mnemonicParsing="false" text="De-Wrinkle" />
+                     </children>
+                  </VBox>
+                  <Button id="SaveDB" fx:id="SaveDB" layoutX="322.0" layoutY="390.0" mnemonicParsing="false" onAction="#SaveDP" text="Save" />
+                  <Label id="SaveSuccessDL" fx:id="SaveSuccessDL" layoutX="267.0" layoutY="356.0" text="*Settings Have Been Saved*" />
+               </children>
+            </Pane>
+            <Pane id="WashP" fx:id="WashP" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <CheckBox id="WashWCB" fx:id="WashWCB" layoutX="314.0" layoutY="37.0" mnemonicParsing="false" text="Only Wash" />
+                  <VBox layoutX="77.0" layoutY="118.0" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label id="HeatWL" fx:id="HeatWL" text="HEAT" />
+                        <CheckBox id="LowWCB" fx:id="LowWCB" mnemonicParsing="false" text="Low" />
+                        <CheckBox id="MediumWCB" fx:id="MediumWCB" mnemonicParsing="false" text="Medium" />
+                        <CheckBox id="HighWCB" fx:id="HighWCB" mnemonicParsing="false" text="High" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="303.0" layoutY="118.0" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label id="LoadSizeWL" fx:id="LoadSizeWL" text="LOAD SIZE" />
+                        <CheckBox id="LightWCB" fx:id="LightWCB" mnemonicParsing="false" text="Light" />
+                        <CheckBox id="NormalWCB" fx:id="NormalWCB" mnemonicParsing="false" text="Normal" />
+                        <CheckBox id="HeavyWCB" fx:id="HeavyWCB" mnemonicParsing="false" text="Heavy" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="556.0" layoutY="109.0" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label id="CycleWL" fx:id="CycleWL" text="CYCLE" />
+                        <CheckBox id="DelicatesWCB" fx:id="DelicatesWCB" mnemonicParsing="false" text="Delicate" />
+                        <CheckBox id="PermPressWCB" fx:id="PermPressWCB" mnemonicParsing="false" text="Perm Press" />
+                     </children>
+                  </VBox>
+                  <Button id="SaveWB" fx:id="SaveWB" layoutX="324.0" layoutY="390.0" mnemonicParsing="false" onAction="#SaveWP" text="Save" />
+                  <Label id="SaveSuccessWL" fx:id="SaveSuccessWL" layoutX="280.0" layoutY="364.0" text="*Settings Have Been Saved*" />
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </center>
+   <top>
+      <Button id="FullCycleB" fx:id="FullCycleB" mnemonicParsing="false" onAction="#MainMenuRP" prefHeight="40.0" prefWidth="700.0" text="FULL CYCLE" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <Pane id="BackButtonP" fx:id="BackButtonP" prefHeight="31.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button id="BackButtonB" fx:id="BackButtonB" layoutY="-1.0" mnemonicParsing="false" onAction="#BackButton" text="Back" />
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>
